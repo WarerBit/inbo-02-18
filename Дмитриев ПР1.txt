@@ -1,0 +1,42 @@
+Ball.java
+
+public class Ball {
+    private int radius;
+    private int weight;
+    public Ball(int radius,int weight){
+        this.radius = radius;
+        this.weight = weight;
+    }
+    public Ball(){
+        radius = 1;
+        weight = 1;
+    }
+    public void setRadius(int radius){
+        this.radius = radius;
+    }
+    public void setWeight(int weight){
+        this.weight = weight;
+    }
+    public int getRadius(){
+        return(radius);
+    }
+    public int getWeight(){
+        return(weight);
+    }
+}
+
+
+Main.java
+
+public class Main {
+    public static void main(String[] args){
+        Ball b1 = new Ball(30,5);
+        Ball b2 = new Ball();
+        Ball b3 = new Ball(5,1);
+        b2.setRadius(b1.getRadius()-b3.getRadius());
+        b2.setWeight(b1.getWeight()-b3.getWeight());
+        System.out.println("Ball 1 radius ="+b1.getRadius()+",Ball 1 weight ="+b1.getWeight());
+        System.out.println("\nBall 2 radius ="+b2.getRadius()+",Ball 2 weight ="+b2.getWeight());
+        System.out.println("\nBall 3 radius ="+b3.getRadius()+",Ball 3 weight ="+b3.getWeight());
+    }
+}
